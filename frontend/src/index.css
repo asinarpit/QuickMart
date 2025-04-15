@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html{
+    @apply scroll-smooth
+  }
+  body {
+    @apply font-sans text-dark bg-light min-h-screen scroll-smooth;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-md font-medium transition-all duration-200 ease-in-out transform hover:scale-105 active:scale-95;
+  }
+  
+  .btn-primary {
+    @apply btn bg-primary text-dark hover:bg-opacity-90;
+  }
+  
+  .btn-secondary {
+    @apply btn bg-secondary text-white hover:bg-opacity-90;
+  }
+  
+  .btn-outline {
+    @apply btn border-2 border-dark text-dark hover:bg-dark hover:text-white;
+  }
+  
+  .card {
+    @apply bg-white p-4 rounded-lg shadow-md;
+  }
+  
+  .input {
+    @apply w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent;
+  }
+  
+  .badge {
+    @apply px-2 py-1 text-xs rounded-full font-medium;
+  }
+  
+  .badge-primary {
+    @apply badge bg-primary text-dark;
+  }
+  
+  .badge-secondary {
+    @apply badge bg-secondary text-white;
+  }
+  
+  .badge-danger {
+    @apply badge bg-danger text-white;
+  }
+}
+
+/* Animations */
+.fadeIn {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.slideInRight {
+  animation: slideInRight 0.5s ease-in-out;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.slideInLeft {
+  animation: slideInLeft 0.5s ease-in-out;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+} 
